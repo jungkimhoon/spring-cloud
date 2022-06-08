@@ -1,2 +1,2 @@
 # spring-cloud
-Spring Cloud Study..
+Spring Cloud MSA Study
