@@ -7,10 +7,15 @@ spring:
       enabled: always
   application:
     name: config-server
+  profiles:
+    active: native
   cloud:
     config:
       server:
+        native:
+          search-locations: file://${user.home}/workspace/native-local-repo
         git:
-          uri: file://Users/user/workspace/git-local-repo
-#        native:
-#          search-locations: file://Users/user/workspace/git-local-repo
+#          uri: file://Users/user/workspace/git-local-repo
+          uri: https://github.com/jungkimhoon/spring-cloud-config
+#          username: [when private repo]
+#          password: [when private repo]
