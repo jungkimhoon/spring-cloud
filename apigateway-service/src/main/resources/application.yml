@@ -15,6 +15,11 @@ spring:
       enabled: always
   application:
     name: apigateway-service
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
   config:
     import: optional:configserver:http://localhost:8888/
   cloud:
@@ -95,8 +100,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: refresh, health, beans, httptrace
-
+        include: refresh, health, beans, httptrace, busrefresh
 #
 #token:
 #  secret: user_token
